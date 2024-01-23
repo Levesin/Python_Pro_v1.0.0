@@ -1,5 +1,16 @@
-from faker import generator
+from faker import Faker
 
-class FakeData():
-    def __init__(self, num):
-        self.num = num
+
+def fake_data(num):
+    fake = Faker()
+    for index in range(1, num):
+        print(
+         f"Имя: {fake.name()},\n"
+         f"Фамилия: {fake.address()},\n"
+         f"Номер: {fake.phone_number()},\n"
+         f"Email: {fake.email()},\n"
+         f"{'-'*30}")
+
+
+
+
